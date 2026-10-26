@@ -38,7 +38,7 @@ class UserRegistration(BaseModel):
             raise ValueError("Passwords do not match")
         return self
 
-    # Valid input with trailing whitespace and uppercase email
+    
 user = UserRegistration(
     username="  john_doe99  ",
     email="JOHN@EXAMPLE.COM",
@@ -47,5 +47,5 @@ user = UserRegistration(
     confirm_password="supersecret123",
 )
 
-print(user.username)  # "john_doe99" (spaces stripped)
-print(user.email)     # "john@example.com" (lowercased)
+print(user.username)  
+print(user.email)     
